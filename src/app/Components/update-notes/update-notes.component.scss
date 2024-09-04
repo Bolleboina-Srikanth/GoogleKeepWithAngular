@@ -1,0 +1,82 @@
+.note-modal{
+   padding: 8px;
+   overflow-y: hidden;
+
+}
+.input-title{
+    border: none;
+    outline: none;
+}
+textarea{
+    outline: none;
+    border: none;
+        width: 100%;
+    min-height: 30px;
+    // max-height: 300px;
+    letter-spacing: .0142857143em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;   
+    line-height: 1.25rem;
+}
+.note-modal input,
+.note-modal textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    // margin-bottom: 5px;
+}
+.title-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-note-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    background-color: #e9eaea;
+    border-radius: 50%;
+}
+.add-note-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-size: 17px;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    background-color: #e9eaea;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

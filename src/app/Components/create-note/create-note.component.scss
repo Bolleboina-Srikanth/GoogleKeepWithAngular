@@ -1,0 +1,100 @@
+.note-container-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // z-index: 1;
+    width: 75vw;
+    position: sticky;
+    left: 0px;
+}
+
+.all-notes{
+    width: 100%;
+
+}
+
+.note-container {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    width: 520px;
+    transition: all 0.3s ease;
+    margin-top: 3%;
+}
+
+.note-container {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.title-div {
+    display: flex;
+}
+
+.note-collapsed {
+    display: flex;
+    height: 29px;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-collapsed input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.note-expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    min-height: 30px;
+    // max-height: 300px;
+    letter-spacing: .0142857143em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;   
+    line-height: 1.25rem;
+}
+
+.note-expanded input,
+.note-expanded textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    // margin-bottom: 5px;
+}
+
+.three-icons {
+    font-size: 22px;
+    border-radius: 50%;
+    font-weight: 400
+}
+
+.take-a-note-icons{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    background-color: #e9eaea;
+    border-radius: 50%;
+}
+.add-note-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-size: 17px;
+    border-radius: 50%;
+    font-weight: 500;
+}

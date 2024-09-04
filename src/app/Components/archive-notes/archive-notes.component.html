@@ -1,0 +1,29 @@
+<div class="notes-container">
+
+    <mat-card class="note-card" *ngFor="let notes of notesArray" [style.background]="notes.colour">
+        <ng-container *ngIf="notes.image">
+            <img mat-card-image [src]="notes.image" alt="Image description"
+                style="width: 100%;padding: 0px;margin: 0px;">
+        </ng-container>
+        <div style="margin: 6px;">
+            <div class="title-div">
+                <mat-card-title mat-input>
+                    {{notes.title}}
+                </mat-card-title>
+                <mat-icon>
+                    <span class="material-symbols-outlined" style="color:#6f6f70;">keep</span>
+                </mat-icon>
+            </div>
+
+            <mat-card-content style="margin: 0px;padding: 0px;">
+                <div
+                    style="display: block;justify-content: left; width: 100%; overflow-wrap: break-word;min-height: 35px;">
+                    {{notes.takeNote}}
+                </div>
+            </mat-card-content>
+            <app-app-icon [noteObject]="notes" (noteUpdated)="onNoteUpdated()"></app-app-icon>
+        </div>
+    </mat-card>
+
+
+</div>

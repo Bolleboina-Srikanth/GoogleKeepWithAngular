@@ -1,0 +1,60 @@
+<div class="parent-div">
+
+    <div class="child-div">
+        <div class="register-title"> <img [src]="'assets/Images/flat-color-icons--google.svg'" width="60" height=""
+                alt="ggiyu">&nbsp;
+            <span style="font-size:x-large;">Create your fundoo account</span>
+        </div><br>
+        <form class="r-form" [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+            <div class="name-fields">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="" class="input-f" formControlName="firstName">
+                    <mat-error *ngIf="registerForm.get('firstName')?.hasError('required')">please enter
+                        first Name</mat-error>
+                        <mat-error *ngIf="registerForm.get('firstName')?.hasError('pattern')">please enter a valid name</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="" class="input-f" formControlName="email">
+                    <mat-error *ngIf="registerForm.get('email')?.hasError('required')">please enter email</mat-error>
+                    <mat-error *ngIf="registerForm.get('email')?.hasError('email')">please enter a valid
+                        email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="name-fields">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="" class="input-f" formControlName="lastName">
+                    <mat-error *ngIf="registerForm.get('lastName')?.hasError('required')">please enter last Name</mat-error>
+                    <mat-error *ngIf="registerForm.get('lastName')?.hasError('pattern')">please enter a valid valid name</mat-error>
+                </mat-form-field>
+                <!-- <p style="line-height: 0px;color: #4758b8; font-weight: 500;">Forgot email?</p> -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="" class="input-f" formControlName="password">
+                    <mat-error *ngIf="registerForm.get('password')?.hasError('required')">please enter password</mat-error>
+                    <mat-error *ngIf="registerForm.get('password')?.hasError('pattern')">please enter a valid password</mat-error>
+                </mat-form-field>
+            </div>
+
+            <br>
+            <div class="btns">
+                <button class="login-btn" (click)="navigateToSignIN()">SignIn</button>
+                <button mat-flat-button type="submit" color="primary" style="border-radius: 1rem;">Create
+                    account</button>
+            </div>
+        </form>
+    </div>
+    <div class="terms">
+        <div class="terms1">
+            <p>English(United States)</p>
+        </div>
+        <div class="terms2">
+            <a href="">Help</a>
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="p-container">
+    <form action="" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+        <mat-form-field appearance="outline">
+            <mat-label>title</mat-label>
+            <input matInput placeholder="" formControlName="title" class="input-f">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>enter your task</mat-label>
+            <input matInput placeholder="" formControlName="task" class="input-f">
+        </mat-form-field>
+        <div>
+            <button mat-flat-button type="submit" color="primary" style="border-radius: 1rem;">Submit</button>
+            <button mat-flat-button type="submit" color="primary" style="border-radius: 1rem;">Edit</button>
+        </div>
+
+    </form><br>
+</div>
+<br>
+
+<div class="table-div">
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Title</th>
+                <th>Task</th>
+                <th>Review task</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let users of userdata;let i = index">
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{ users.title }} </td>
+                <td>{{ users.task }}</td>
+                <td><mat-checkbox class="example-margin" (change)="update($event.checked)"></mat-checkbox></td>
+                <td>
+                    <button mat-button >Edit</button>
+                    <button mat-button color="warn" (click)="onDelete(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

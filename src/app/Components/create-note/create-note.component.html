@@ -1,0 +1,47 @@
+<div class="note-container-div">
+
+
+    <div class="note-container" id="notemodal" (click)="expandNote()">
+        <div class="note-collapsed" *ngIf="!isExpanded">
+            <input type="text" placeholder="Take a note..." (focus)="expandNote()">
+            <div class="take-a-note-icons">
+                <span class="material-symbols-outlined three-icons">
+                    check_box
+                </span>
+                <span class="material-symbols-outlined  three-icons">
+                    brush
+                </span>
+                <span class="material-symbols-outlined  three-icons">
+                    image
+                </span>
+            </div>
+        </div>
+
+        <div class="note-expanded" *ngIf="isExpanded">
+            <form [formGroup]="createForm" (ngSubmit)="SubmitNote()">
+                <div class="title-div">
+                    <input matInput type="text" placeholder="Title" formControlName="title">
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <mat-icon><span class="material-symbols-outlined" style="color:#6f6f70;">keep</span></mat-icon>
+                    </button>
+                </div>
+                <textarea matInput placeholder="Take a note..." (input)="adjustTextareaHeight($event)"
+                    style="resize: none; overflow: hidden;" formControlName="description"></textarea>
+
+                <div class="add-note-icons">
+                    <div style="width:67%;display: flex;justify-content: space-between;align-items: center;">
+                        <div style="width: 70%;">
+                            <app-app-icon></app-app-icon>
+                        </div>
+                        <span class="material-symbols-outlined">undo</span>
+                        <span class="material-symbols-outlined">redo</span>
+                    </div>
+                    <div>
+                        <button mat-flat-button type="submit">Close</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

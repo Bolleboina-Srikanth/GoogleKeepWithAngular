@@ -1,0 +1,57 @@
+<div class="parent-div">
+    <div class="child-div">
+        <h2>Registeration form</h2>
+
+        <form action="" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+            <mat-label>First Name</mat-label><br>
+            <mat-form-field appearance="outline">
+                <input matInput class="input-field" formControlName="firstName">
+            </mat-form-field><br>
+
+            <mat-label>Last Name</mat-label><br>
+            <mat-form-field appearance="outline">
+                <input matInput class="input-field" formControlName="lastName">
+            </mat-form-field> <br>
+
+            <mat-label>Email</mat-label>br
+            <mat-form-field appearance="outline">
+                <input matInput class="input-field" formControlName="email">
+            </mat-form-field><br>
+
+            <mat-label>Phone Number</mat-label><br>
+            <mat-form-field appearance="outline">
+                <input matInput class="input-field" formControlName="number">
+            </mat-form-field>
+
+            <button mat-flat-button type="submit" color="primary" style="border-radius: 1rem;">Submit</button>
+            <button mat-flat-button type="submit" color="primary" style="border-radius: 1rem;"
+                (click)="editChanges()">Edit</button>
+
+        </form>
+
+    </div>
+
+    <table *ngFor="let registration of users;let i = index">
+        <tr>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>phonenumber</th>
+            <th>actions</th>
+        </tr>
+        <tr>
+            <td>{{ registration.firstName }} </td>
+            <td>{{ registration.lastName }}</td>
+            <td>{{ registration.email }}</td>
+            <td>
+                {{ registration.number }}
+
+            </td>
+            <td>
+                <button mat-button (click)="onEdit(i)">Edit</button>
+                <button mat-button color="warn" (click)="onDelete(i)">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

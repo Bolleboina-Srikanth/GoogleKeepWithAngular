@@ -1,0 +1,37 @@
+.p-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    // height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: 50%;
+}
+mat-form-field{
+    // width: 40%;
+    
+}
+input {
+    outline: none;
+    border: none;
+}
+.table-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }

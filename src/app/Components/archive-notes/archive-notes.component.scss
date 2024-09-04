@@ -1,0 +1,63 @@
+.notes-container {
+    display: flex;            
+    flex-wrap: wrap;          
+    gap: 16px;                
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 12px;
+    padding-bottom: 70px;
+
+}
+
+.note-card {
+    display: flex;
+    flex-direction: column;   
+    flex: 1 1 205px;          
+    max-width: 205px;        
+    box-sizing: border-box;   
+}
+// mat-card{
+//     padding: 12px;
+//     margin: 8px;
+//     width: 25%;
+// }
+mat-card-title{
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding-top: 12px;
+    min-height: 35px;
+}
+
+.note-icons{
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+.material-symbols-outlined {
+    display: contents;
+    justify-content: space-between;
+    font-size: 17px;
+    border-radius: 100%;
+    font-weight: 500;
+}
+
+.title-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-card-title{
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding-top: 12px;
+    min-height: 35px;
+    width: 99%;
+}
+
+

@@ -1,0 +1,24 @@
+<div class="note-modal" [style.background]="color">
+
+    <div class="title-div">
+        <input matInput type="text" placeholder="Title" class="input-title" [(ngModel)]="title">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon><span class="material-symbols-outlined" style="color:#6f6f70;">keep</span></mat-icon>
+        </button>
+    </div>
+    <textarea matInput placeholder="Take a note..." style="resize: none; " [(ngModel)]="desc"
+        (input)="adjustTextareaHeight($event)"></textarea>
+
+    <div class="add-note-icons">
+        <div style="width:67%;display: flex;justify-content: space-between;align-items: center;">
+            <div style="width: 70%;">
+                <app-app-icon></app-app-icon>
+            </div>
+            <span class="material-symbols-outlined">undo</span>
+            <span class="material-symbols-outlined">redo</span>
+        </div>
+        <div>
+            <button mat-flat-button type="submit" (click)="closeDialog()">Close</button>
+        </div>
+    </div>
+</div>

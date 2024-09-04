@@ -1,0 +1,84 @@
+.parent-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f9;
+  width: 100vw;
+  height: 100vh;
+}
+
+.child-div {
+  width: 68%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+.g-div {
+  height: 80%;
+  width: 50%;
+  padding-left: 10px;
+}
+form{
+  margin-top: 15px;
+  // background-color: red;
+}
+
+mat-form-field {
+  width: 90%;
+  height: 15vh;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 19px;
+  width: 90%;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  padding: 10px;
+}
+
+
+.terms {
+  display: flex;
+  justify-content: center;
+  width: 68%;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.terms1 {
+  width: 48%;
+  display: flex;
+  align-items: center;
+}
+
+.terms2 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+#c-acct{
+  border: none;
+  text-decoration: underline;
+  color: #4758b8;
+  cursor: pointer;
+  font-size: large;
+}

@@ -1,0 +1,45 @@
+<div class="note-actions">
+    <div class="note-icons">
+
+        <span class="material-symbols-outlined">
+            add_alert
+        </span>
+        <span class="material-symbols-outlined">
+            person_add
+        </span>
+
+        <span class="material-symbols-outlined" [matMenuTriggerFor]="paletteMenu" (click)="addedColor($event)">
+            palette
+        </span>
+        <span class="material-symbols-outlined" (click)="fileInput.click()">
+            image
+            <input type="file" accept="image/*" (change)="onImageSelected($event)" style="display: none;" #fileInput>
+           
+        </span>
+        <span class="material-symbols-outlined" (click)="onArchive()">
+            archive
+        </span>
+        <span class="material-symbols-outlined" [matMenuTriggerFor]="menu">
+            more_vert
+        </span>
+        <mat-menu #menu="matMenu">
+            <div class="more-list">
+                <button (click)="deleteNote()" class="more-l-btns">Delete note</button>
+                <button class="more-l-btns">Add label</button>
+                <button class="more-l-btns">Add drawing</button>
+                <button class="more-l-btns">Make a copy</button>
+                <button class="more-l-btns">Show tick boxes</button>
+                <button class="more-l-btns">Copy to Google Docs</button>
+                <button class="more-l-btns">Version history</button>
+            </div>
+        </mat-menu>
+
+        <mat-menu #paletteMenu="matMenu" xPosition="before" id="colorpalette">
+            <div class="color-container">
+                <div *ngFor="let colors of colorArray">
+                    <button class="color-btns" [style.background]="colors.code" (click)="selectColor(colors)"></button>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+</div>
